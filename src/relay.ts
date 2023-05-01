@@ -2,7 +2,6 @@ import * as LibP2P from 'libp2p'
 import { webSockets } from '@libp2p/websockets'
 import { mplex } from '@libp2p/mplex'
 import { noise } from '@chainsafe/libp2p-noise'
-import { kadDHT } from '@libp2p/kad-dht'
 import { webRTCDirect } from '@libp2p/webrtc-direct'
 import { gossipsub } from '@chainsafe/libp2p-gossipsub'
 import { pubsubPeerDiscovery } from '@libp2p/pubsub-peer-discovery'
@@ -23,11 +22,10 @@ export async function relay() {
     streamMuxers: [mplex()],
     connectionEncryption: [noise()],
     peerDiscovery: [pubsubPeerDiscovery({ topics })],
-    dht: kadDHT(),
     pubsub: gossipsub({ allowPublishToZeroPeers: true }),
     relay: circuitRelayServer(),
     addresses: {
-      listen: ['/ip4/0.0.0.0/tcp/0/ws', '/ip4/0.0.0.0/tcp/9090/http/p2p-webrtc-direct']
+      listen: ['/ip4/0.0.0.0/tcp/46265/ws', '/ip4/0.0.0.0/tcp/9090/http/p2p-webrtc-direct']
     }
   })
 
