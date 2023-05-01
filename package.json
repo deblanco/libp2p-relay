@@ -1,0 +1,29 @@
+{
+  "name": "libp2p-relay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "rm -rf build/ && tsc",
+    "start": "node --experimental-vm-modules build/src/index.js"
+  },
+  "dependencies": {
+    "@chainsafe/libp2p-gossipsub": "^7.0.0",
+    "@chainsafe/libp2p-noise": "^11.0.4",
+    "@libp2p/kad-dht": "^9.1.0",
+    "@libp2p/mplex": "^8.0.1",
+    "@libp2p/pubsub-peer-discovery": "^8.0.4",
+    "@libp2p/webrtc-direct": "^6.0.0",
+    "@libp2p/websockets": "^6.0.1",
+    "@multiformats/multiaddr": "^12.1.2",
+    "libp2p": "^0.44.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  }
+}
