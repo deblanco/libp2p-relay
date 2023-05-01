@@ -550,7 +550,7 @@
     "@libp2p/interface-peer-id" "^2.0.0"
     "@libp2p/peer-id" "^2.0.0"
 
-"@libp2p/peer-id-factory@^2.0.0":
+"@libp2p/peer-id-factory@^2.0.0", "@libp2p/peer-id-factory@^2.0.3":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@libp2p/peer-id-factory/-/peer-id-factory-2.0.3.tgz#d841989494c4900e01f6e3929ef06b8cc4e56f8f"
   integrity sha512-9pwVbfghiKuiC76Pue/+tI4PD7gnw1jGVcxYD+nhcRs8ABE7NLaB7nCm99cCtvmMNRnl2JqaGgZJXt8mnvAEuQ==
