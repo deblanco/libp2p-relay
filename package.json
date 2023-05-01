@@ -18,6 +18,7 @@
     "@libp2p/webrtc-direct": "^6.0.0",
     "@libp2p/websockets": "^6.0.1",
     "@multiformats/multiaddr": "^12.1.2",
+    "dotenv": "^16.0.3",
     "libp2p": "^0.44.0",
     "uint8arrays": "^4.0.3"
   },

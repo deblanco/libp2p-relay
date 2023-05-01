@@ -8,10 +8,16 @@ import { gossipsub } from '@chainsafe/libp2p-gossipsub'
 import { pubsubPeerDiscovery } from '@libp2p/pubsub-peer-discovery'
 import { circuitRelayServer } from 'libp2p/circuit-relay'
 import { topics } from './index.js'
+import { createFromJSON } from '@libp2p/peer-id-factory'
 
 export async function relay() {
+  const peerId = await (process.env.PEER_ID_CFG
+    ? createFromJSON(JSON.parse(process.env.PEER_ID_CFG))
+    : undefined)
+
   console.log('Initializing libp2p node...')
   const node = await LibP2P.createLibp2p({
+    peerId,
     start: true,
     transports: [webSockets(), webRTCDirect()],
     streamMuxers: [mplex()],

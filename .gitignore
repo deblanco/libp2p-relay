@@ -106,3 +106,5 @@ dist
 build
 
 .parcel-cache
+
+.env

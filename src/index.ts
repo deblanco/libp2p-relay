@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 // import { client } from './client.js'
 import { relay } from './relay.js'
 
